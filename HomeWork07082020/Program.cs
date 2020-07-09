@@ -6,7 +6,15 @@ namespace HomeWork07082020
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Enter any number");
+            string input = Console.ReadLine();
+            if(!int.TryParse(input, out int InputAsInt))
+            {
+                Console.WriteLine("There was something wrong with your input.");
+                return;
+            }
+            Console.WriteLine("Your input was "+InputAsInt);
+            
         }
     }
 }
